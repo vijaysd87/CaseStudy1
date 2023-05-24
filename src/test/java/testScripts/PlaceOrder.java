@@ -35,7 +35,7 @@ public class PlaceOrder extends TestBase{
 		homepage.homebtn();
 		homepage.selectItem3();
 		addcart.addCart();
-		homepage.homebtn();
+		//homepage.homebtn();
 		
 		orderpage=new OrderPage();
 		orderpage.checkout("vijay", "India", "Bengaluru", "55656", "May", "2023");

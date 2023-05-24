@@ -42,6 +42,10 @@ public class OrderPage extends TestBase {
 	@FindBy(xpath="(//button[.='Close'])[3]")
 	WebElement cls;
 	
+	@FindBy(xpath="(//a[.='Delete'])[3]")
+	WebElement delete;
+	
+	
 	
 	//Actions
 	//login
@@ -58,18 +62,25 @@ public class OrderPage extends TestBase {
 	public void checkout(String str1,String str2,String str3,String str4,String str5,String str6) throws InterruptedException
 	{
 		cart.click();
+		Thread.sleep(1000);
+		delete.click();
+		Thread.sleep(1000);
 		chkout.click();
+		Thread.sleep(1000);
+	
 		pname.sendKeys(str1);
 		country.sendKeys(str2);
 		city.sendKeys(str3);
 		card.sendKeys(str4);
 		month.sendKeys(str5);
 		year.sendKeys(str6);
+		
+		Thread.sleep(1000);
 		buy.click();
 		Thread.sleep(2000);
 		ok.click();
-		Thread.sleep(2000);
-		cls.click();
+//		Thread.sleep(2000);
+//		cls.click();
 	}
 }
 
